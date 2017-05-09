@@ -9,5 +9,5 @@ usage
 `python parse_data.py`  
 7. extract bounding box proposal  
 `python parse_bbox.py`  
-8. `cd ..` and train the model according to ronghang/text_objseg, change path `exp-referit` into `refer`
+8. `cd ..` and train the model according to ronghang/text_objseg, only change path `exp-referit` into `refer`
 
