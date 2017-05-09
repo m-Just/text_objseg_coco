@@ -1,0 +1,5 @@
+testing image 749 / 750
+Final results on the whole test set
+recall@1 = 0.110723
+recall@10 = 0.534579
+recall@100 = 0.618233

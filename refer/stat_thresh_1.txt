@@ -1,0 +1,25 @@
+Threshold = 1
+Total 5305 vocabularies is extracted
+Total 5822 special tokens found with occurence 5822
+total     429073         %
+with       15438       3.6
+in         14399       3.4
+shirt      12280       2.9
+man        11673       2.7
+the        11628       2.7
+white      10423       2.4
+black       8087       1.9
+blue        6978       1.6
+woman       6410       1.5
+on          6401       1.5
+red         6294       1.5
+to          6257       1.5
+<unk>       5822       1.4
+guy         5344       1.2
+of          5161       1.2
+closest     4875       1.1
+girl        4546       1.1
+and         4196      0.98
+person      3704      0.86
+green       3313      0.77
+Total 5521 special tokens occur in all 120191 expressions
