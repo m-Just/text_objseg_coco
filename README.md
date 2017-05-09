@@ -1,7 +1,8 @@
 usage  
 1. go to direcotry refer  
 `cd refer`  
-2. `mkdir coco_bbox` and put downloaded coco bounding box proposal in to the directory  
+2. download refcoco+ expression and annotation from [http://tlberg.cs.unc.edu/licheng/referit/data/refcoco+.zip] and extract `refcoco+` into `data`
+2. extract `coco_bbox.zip`
 3. download refcoco+ image dataset (this may take a long time)  
 `python download_dataset.py`  
 4. extract data from refcoco+  
