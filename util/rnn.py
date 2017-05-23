@@ -54,8 +54,7 @@ def lstm_layer(name, seq_bottom, const_bottom, output_dim, num_layers=1,
     # Other details in tensorflow/python/ops/rnn_cell.py
     with tf.variable_scope(name):
         # the basic LSTM cell
-        #lstm_cell = tf.contrib.rnn.BasicLSTMCell(output_dim, forget_bias)
-        lstm_cell = tf.nn.rnn_cell.BasicLSTMCell(output_dim, forget_bias)
+        lstm_cell = tf.contrib.rnn.BasicLSTMCell(output_dim, forget_bias)
         # Apply dropout if specified.
         if apply_dropout and keep_prob < 1:
             lstm_cell = tf.contrib.rnn.DropoutWrapper(
