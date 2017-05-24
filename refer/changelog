@@ -1,0 +1,12 @@
+In parse_bbox.py
+    many lines: change img_list to coco_list
+    line 36-38: preserve right and bottom bound edges
+    line 40-41: remove duplication stage of proposal
+
+In extract_vocabulary.py
+    line 9: change <unk> to stk
+    line 17: change special_token to <unk>
+    line 18: add special_token stk
+
+In parse_data.py
+    line 114: change np.int8 to np.int16

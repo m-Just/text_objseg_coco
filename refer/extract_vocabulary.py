@@ -6,7 +6,7 @@ import re
 import operator
 
 threshold = 1
-special_token = '<unk>'
+special_token = 'stk'
 
 def extract():
     print "Threshold =", threshold
@@ -14,7 +14,8 @@ def extract():
     out.write('<pad>' + '\n')
     out.write('<go>' + '\n')
     out.write('<eos>' + '\n')
-    out.write(special_token + '\n')
+    out.write('<unk>' + '\n')
+    out.write('stk' + '\n')
 
     word_dict = dict()
     word_dict[special_token] = 0
@@ -57,7 +58,7 @@ def extract():
     for i in range(20):
         stat.write("{:<10}{:>6}{:>10.2}\n".format(sorted_dict[i][0], sorted_dict[i][1], float(sorted_dict[i][1]) / total_cnt * 100))
 
-    # Count the number of expressions containing <stk> 
+    # Count the number of expressions containing <stk>
     exp_cnt = 0
     stk_exp_cnt = 0
     for ref in data:
