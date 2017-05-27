@@ -10,3 +10,4 @@ In extract_vocabulary.py
 
 In parse_data.py
     line 114: change np.int8 to np.int16
+    line 203: only take the first query of each expression
