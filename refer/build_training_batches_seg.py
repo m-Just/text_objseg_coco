@@ -14,9 +14,6 @@ from util.io import load_referit_gt_mask as load_gt_mask
 # Parameters
 ################################################################################
 
-
-
-
 image_dir = './refer/data/images/mscoco/images/train2014/'
 mask_dir = './refer/data/mask/'
 query_file = './refer/data/refcoco+_query_trainval.json'

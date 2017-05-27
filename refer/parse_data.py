@@ -200,7 +200,8 @@ def extract_query():
             query_id = str(ref['image_id']) + '_' + str(ref_no)
 
             query = list()
-            for sent in ref['sentences']:
+            #for sent in ref['sentences']:
+            for sent in ref['sentences'][:1]:
                 text = sent['sent']
                 for token in sent['tokens']:
                     if token in stk:
@@ -239,5 +240,5 @@ if __name__ == '__main__':
     size_dict = extract_imsize()
     stk = load_special_tokens()
     #extract_mask()
-    extract_bbox()
-    #extract_query()
+    #extract_bbox()
+    extract_query()
