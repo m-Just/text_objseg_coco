@@ -34,9 +34,9 @@ for img_name in img_names:
         box = bbox[cnt][0][0]
         data_shape = box.shape
 
-        # for i in range(data_shape[0]):
-        #     for j in range(2, 4):
-        #         box[i, j] -= 1
+        for i in range(data_shape[0]):
+            for j in range(2, 4):
+                box[i, j] -= 1
 
         # while data_shape[0] < 100:
         #     box = np.concatenate((box, bbox[cnt][0][0]), axis=0)

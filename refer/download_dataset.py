@@ -5,6 +5,9 @@ import sys
 import os
 import json
 
+dataset = 'data/refcoco+'
+image_path = 'data/images/mscoco/images/train2014'
+
 def download_single_img(img):
     file_name = img['file_name']
     f = open(image_path + '/' + file_name, 'wb')
@@ -40,8 +43,6 @@ def download():
         pool.terminate()
 
 if __name__ == '__main__':
-    dataset = 'data/refcoco+'
-    image_path = 'data/images/mscoco/images/train2014'
     if not os.path.isdir(image_path):
         acc_path = ''
         for path in image_path.split('/'):

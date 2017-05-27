@@ -133,7 +133,11 @@ for n_batch in range(num_batch):
     batch_end = (n_batch+1) * N
     for n_sample in range(batch_begin, batch_end):
         imname, imsize, sample_bbox, description, label = shuffled_training_samples[n_sample]
-        im = skimage.io.imread(image_dir + imname)
+        try:
+            im = skimage.io.imread(image_dir + imname)
+        except:
+            print('Error:' + imname)
+            exit()
         xmin, ymin, xmax, ymax = sample_bbox
 
         if len(im.shape) == 2:

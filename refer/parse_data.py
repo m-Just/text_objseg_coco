@@ -166,10 +166,10 @@ def extract_bbox():
             img_cnt += 1
         last_image_id = ref['image_id']
         bbox = refer.getRefBox(ref_id)
-        bbox = map(int, [bbox[0], bbox[1], bbox[0]+bbox[2], bbox[1]+bbox[3]])
+        bbox = map(int, [bbox[0], bbox[1], bbox[0]+bbox[2]-1, bbox[1]+bbox[3]-1])
         size = size_dict['COCO_train2014_' + '{:012d}'.format(ref['image_id']) + '.jpg']
-        if bbox[2] > size[0] or bbox[3] > size[1]:
-            print "Error:", bbox[2:], ">", size
+        if bbox[2] >= size[0] or bbox[3] >= size[1]:
+            print "Error:", bbox[2:], ">=", size
         bbox_dict[str(ref['image_id']) + '_' + str(ref_no)] = bbox
 
     f = open(data_root + data_set_name + '_bbox.json', 'w')
@@ -234,10 +234,10 @@ if __name__ == '__main__':
     instances = json.load(open(data_root + data_set_name + '/instances.json'))
     ref_ids = refer.getRefIds()
 
-    extract_imlist()
-    extract_imcrop()
+    #extract_imlist()
+    #extract_imcrop()
     size_dict = extract_imsize()
     stk = load_special_tokens()
-    extract_mask()
+    #extract_mask()
     extract_bbox()
-    extract_query()
+    #extract_query()
